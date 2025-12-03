@@ -13,7 +13,7 @@
 
 ## Project Description
 
-**Coeus** is a Python script to search through **Edge** and **Chrpmoim** History archives.  
+**Coeus** is a Python and script to search through **Edge** and **Chrpmoim** History archives.  
 It extracts URL visit data, including:
 
 - Timestamp of visit  
@@ -23,6 +23,8 @@ It extracts URL visit data, including:
 - Associated downloads and their URL chains  
 
 This tool is designed for **DFIR (Digital Forensics and Incident Response)** purposes and produces a **forensic-friendly output**.
+
+**Functional in Python, still a work in progress in Bash**
 
 ---
 
