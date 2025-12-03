@@ -28,20 +28,47 @@ This tool is designed for **DFIR (Digital Forensics and Incident Response)** pur
 
 ---
 
+## Prerequisites
+
+### Python Version
+
+- Python 3.x
+
+### SQLite
+
+- SQLite3 database file (usually named `History`) from Edge or Chrome.
+
+### Bash Version (for Bash script)
+
+- Bash 4.0 or higher (required for associative arrays and certain features).
+- `sqlite3` command-line utility must be installed and available in `PATH`.
+
+---
+
 ## Usage
 
-### Prerequisites
+### Python Script
 
-- Python 3.x  
-- SQLite3 database file (usually named `History`) from Edge or Chrome  
-
-### Running the Script
+Run the Python version of Coeus to search the History SQLite database:
 
 ```bash
-python3 searcher.py <search_string> [--db /path/to/History]
-
 # Search for all visits containing "login"
 python3 searcher.py login
 
 # Search using a specific History file
 python3 searcher.py "example.com" --db "/Users/username/AppData/Local/Microsoft/Edge/User Data/Default/History"
+```
+### Bash Script
+
+Run the Bash version of Coeus to search the History SQLite database:
+
+```bash
+# Make the script executable (first time only)
+chmod +x searcher.sh
+
+# Search for "login" using default History file in current directory
+./searcher.sh login
+
+# Search using a specific History file
+./searcher.sh "example.com" "/Users/username/AppData/Local/Microsoft/Edge/User Data/Default/History"
+```
